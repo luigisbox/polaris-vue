@@ -5,7 +5,7 @@
             <slot v-if="$slots.prefix" name="prefix"/>
         </div>
         <div style="width: 100%">
-            <!-- <quill-editor
+            <quill-editor
                 v-if="richEditor"
                 :id="id"
                 class="editor"
@@ -21,9 +21,9 @@
                 :aria-describedby="describedBy"
                 :aria-labelledby="labelledBy"
                 :aria-invalid="hasError"
-            /> -->
+            />
             <textarea
-                v-if="multiline"
+                v-else-if="multiline"
                 :name="name"
                 :class="inputClassName"
                 :id="id"
@@ -128,7 +128,7 @@
     import { PSpinner } from '../../../../components/PTextField/components/PSpinner';
     import { PFieldResizer } from '../../../../components/PTextField/components/PFieldResizer';
     import { PIcon } from '../../../../components/PIcon';
-    // import { quillEditor } from 'vue-quill-editor';
+    import { quillEditor } from 'vue-quill-editor';
     import StringValidator from '../../../../utilities/validators/StringValidator';
 
     const Type = [
@@ -141,8 +141,7 @@
     export default {
         name: 'PInput',
         components: {
-            PFieldResizer, PSpinner, PIcon, 
-            // quillEditor,
+            PFieldResizer, PSpinner, PIcon, quillEditor,
         },
         props: {
             id: {

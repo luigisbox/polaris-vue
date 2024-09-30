@@ -1,9 +1,9 @@
 {
-  "name": "@hulkapps/polaris-vue",
+  "name": "polaris-vue",
   "description": "Shopify's polaris component library for Vue.js",
-  "private": false,
+  "private": true,
   "author": "HulkApps <uttam@hulkapps.com>",
-  "repository": "https://github.com/HulkApps/polaris-vue.git",
+  "repository": "https://github.com/luigisbox/polaris-vue.git",
   "bugs": {
     "url": "https://github.com/HulkApps/polaris-vue/issues"
   },
